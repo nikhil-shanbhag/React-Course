@@ -12,7 +12,7 @@ export default function Footer() {
                 src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
                 className="mr-3 h-16"
                 alt="Logo"
-              />
+              />z
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

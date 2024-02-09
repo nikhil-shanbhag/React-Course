@@ -18,7 +18,7 @@ function MovieItem({ movie }) {
       const userDoc = doc(db, "users", userEmail);
       setLike(!like);
       await updateDoc(userDoc, {
-        favshows: arrayUnion({ ...movie }),
+        favShows: arrayUnion({ ...movie }),
       });
     } else {
       alert("Login to save a movie");
