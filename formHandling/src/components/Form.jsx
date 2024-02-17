@@ -5,6 +5,8 @@ function Form() {
     <div className="flex items-center justify-center h-screen">
       <form>
         <div className="flex flex-col items-center justify-center border-2">
+        <div class="w-44 h-12 bg-no-repeat inline-block" style="background-image: url('https://static.cdninstagram.com/rsrc.php/v3/ys/r/WBLlWbPOKZ9.png'); background-size: 44rem 66rem; background-position: 0 0;"/>
+
           <input
             className="p-2 w-64 border-[1px] mt-10 my-1"
             type="text"
