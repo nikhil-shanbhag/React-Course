@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [sideNav, setSideNav] = useState(false);
   return (
     <>
-      <div className="flex justify-between py-5 px-6 text-lg font-semibold relative shadow-xl">
+      <div className="flex sticky top-0 z-10 bg-white justify-between py-5 px-6 text-lg font-semibold shadow-xl">
         <GiHamburgerMenu
           size={24}
           onClick={() => setSideNav(!sideNav)}
@@ -15,17 +16,27 @@ const Header = () => {
         />
 
         <div>
-          <h2 className="font-bold text-xl md:text-2xl">
-            Yumi<span className="text-yellow-400">Food</span>
-          </h2>
+          <Link to="/">
+            <h2 className="font-bold text-xl md:text-2xl">
+              Yumi<span className="text-yellow-400">Food</span>
+            </h2>
+          </Link>
         </div>
 
         <div>
           <ul className="sm:flex gap-4 hidden cursor-pointer">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Offers</li>
-            <li>Sign In</li>
+            <Link to="/">
+              <li className="hover:text-yellow-400">Home</li>
+            </Link>
+            <Link to="/aboutus">
+              <li className="hover:text-yellow-400">About Us</li>
+            </Link>
+            <Link to="ourfood">
+              <li className="hover:text-yellow-400">Our Food</li>
+            </Link>
+            <Link to="signin">
+              <li className="hover:text-yellow-400">Sign In</li>
+            </Link>
           </ul>
         </div>
 
@@ -43,10 +54,38 @@ const Header = () => {
           />
 
           <ul className="flex gap-4 cursor-pointer flex-col p-5 font-semibold">
-            <li className="hover:text-yellow-400">Home</li>
-            <li className="hover:text-yellow-400">About Us</li>
-            <li className="hover:text-yellow-400">Offers</li>
-            <li className="hover:text-yellow-400">Sign In</li>
+            <Link to="/">
+              <li
+                className="hover:text-yellow-400"
+                onClick={() => setSideNav(!sideNav)}
+              >
+                Home
+              </li>
+            </Link>
+            <Link to="/aboutus">
+              <li
+                className="hover:text-yellow-400"
+                onClick={() => setSideNav(!sideNav)}
+              >
+                About Us
+              </li>
+            </Link>
+            <Link to="/ourfood">
+              <li
+                className="hover:text-yellow-400"
+                onClick={() => setSideNav(!sideNav)}
+              >
+                Our Food
+              </li>
+            </Link>
+            <Link to="/signin">
+              <li
+                className="hover:text-yellow-400"
+                onClick={() => setSideNav(!sideNav)}
+              >
+                Sign In
+              </li>
+            </Link>
           </ul>
         </div>
       ) : (
