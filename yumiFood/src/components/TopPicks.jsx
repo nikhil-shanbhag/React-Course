@@ -55,7 +55,7 @@ const TopPicks = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center gap-2 p-4">
-                <p className="text-xl font-semibold uppercase">{item.title}</p>
+                <p className="text-lg font-semibold uppercase">{item.title}</p>
                 <p className="text-xl font-semibold uppercase">{item.price}</p>
                 <button className="bg-black w-32 text-white rounded-md my-6 py-4 text-xl hover:text-yellow-400 font-semibold">
                   Add to cart
