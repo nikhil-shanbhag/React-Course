@@ -239,9 +239,8 @@
 //   i++;
 // } while (i < 5);
 
-
 // let name1 = "harry"
-// console.log(name1.length); 
+// console.log(name1.length);
 
 // console.log("har\"".length);
 
@@ -249,14 +248,25 @@
 // console.log(n.pop(10,14,15));
 // console.log(n);
 
-function loadScript(src, callback) {
-    let script = document.createElement("script");
-    script.src = src;
-    script.onload = ()=>callback(script);
-    document.head.append(script)
+// function loadScript(src, callback) {
+//     let script = document.createElement("script");
+//     script.src = src;
+//     script.onload = ()=>callback(script);
+//     document.head.append(script)
+// }
+
+// loadScript("https://google.com", (script)=>{
+//     alert("Script is loaded")
+//     alert(script.src)
+// })
+
+function test1() {
+  let a = "hello";
+  function test2() {
+    console.log(a);
+  }
+  test2();
+  console.log("Thank you");
 }
 
-loadScript("https://google.com", (script)=>{
-    alert("Script is loaded")
-    alert(script.src)
-})
+console.log(test1());
