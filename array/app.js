@@ -260,13 +260,28 @@
 //     alert(script.src)
 // })
 
-function test1() {
-  let a = "hello";
-  function test2() {
-    console.log(a);
-  }
-  test2();
-  console.log("Thank you");
-}
+// function test1() {
+//   let a = "hello";
+//   function test2() {
+//     console.log(a);
+//   }
+//   test2();
+//   console.log("Thank you");
+// }
 
-console.log(test1());
+// console.log(test1());
+
+
+// let user1 = {
+//   name: "john",
+//   age: 23,
+//   city: "usa"
+// }
+
+// let user2 = JSON.parse(JSON.stringify(user1));
+
+// user2 = {
+//   city:"berlin"
+// }
+
+// console.log(user2);
